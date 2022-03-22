@@ -1,0 +1,61 @@
+<div class="row m-3">
+  <div class="card col-md-4 text-center mr-3">
+    <div class="col">
+      <div class="mb-3 mt-3">
+        <img src="assets/product.png" class="rounded-circle" width="200px" height="200px"/>
+      </div>
+      <div class="mb-3">
+        <h2><b>{{monUtilisateur?.nom}}</b> {{monUtilisateur?.prenom}}</h2>
+        <small class="form-text text-muted">Adresse, Ville, 12345</small>
+      </div>
+      <div class="col mb-3 p-0">
+        <button type="button" [routerLink]="'../modifierProfil'" class="btn btn-primary mr-3"><i class="fas fa-pencil-alt"></i>&nbsp;Modifier le
+          profil</button>
+        <button type="button" class="btn btn-warning" (click)="modifierMotDePasse()"><i class="fas fa-lock"></i>&nbsp;Changer le mot de passe</button>
+      </div>
+    </div>
+  </div>
+  <div class="card col-md-7">
+    <table class="table">
+      <tbody>
+      <tr>
+        <th scope="row"><i class="fa-solid fa-signature"></i>&nbsp;Nom complet</th>
+        <td><b>{{monUtilisateur?.nom}}</b> {{monUtilisateur?.prenom}}</td>
+      </tr>
+      <tr>
+        <th scope="row"><i class="fa-solid fa-calendar-day"></i>&nbsp;Date de Naissance</th>
+        <td>{{monUtilisateur?.dateDeNaissance|date}}</td>
+      </tr>
+      <tr>
+      <th scope="row"><i class="fa-solid fa-at"></i>&nbsp;Email</th>
+      <td>{{monUtilisateur?.email}}</td>
+      </tr>
+      <tr>
+      <th scope="row"><i class="fa-solid fa-globe"></i>&nbsp;Pays</th>
+      <td>{{monUtilisateur?.adresse?.pays}}</td>
+      </tr>
+      <tr>
+      <th scope="row"><i class="fa-solid fa-city"></i>&nbsp;Ville</th>
+      <td>{{monUtilisateur?.adresse?.ville}}</td>
+      </tr>
+      <tr>
+      <th scope="row"><i class="fa-solid fa-envelope"></i>&nbsp;Code Postal</th>
+      <td>{{monUtilisateur?.adresse?.codePostale}}</td>
+      </tr>
+      <tr>
+      <th scope="row"><i class="fa-solid fa-location-dot"></i>&nbsp;Adresse 1</th>
+      <td>{{monUtilisateur?.adresse?.adresse1}}</td>
+      </tr>
+      <tr>
+      <th scope="row"><i class="fa-solid fa-location-pin"></i>&nbsp;Adresse 2</th>
+      <td>{{monUtilisateur?.adresse?.adresse2}}</td>
+      </tr>
+      <tr>
+        <th scope="row"><i class="fa-solid fa-square-phone"></i>&nbsp;Numéro de téléphone</th>
+        <td>{{monUtilisateur?.entreprise?.numTel}}</td>
+      </tr>
+      </tbody>
+    </table>
+  </div>
+
+</div>

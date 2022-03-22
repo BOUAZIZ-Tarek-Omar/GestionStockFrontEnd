@@ -1,0 +1,32 @@
+<div class="row">
+  <div class="col-md-7">
+    <div class="input-group flex-nowrap">
+      <input type="text" class="form-control" placeholder="Username" aria-label="Username"
+             aria-describedby="addon-wrapping">
+      <div class="input-group-prepend">
+        <span class="input-group-text" id="addon-wrapping"><i class="fas fa-search"></i></span>
+      </div>
+    </div>
+  </div>
+  <div class="col-md-5">
+    <div class="row d-flex align-items-center">
+      <div class="col-md-5 text-right">
+        <span>Bonjour <b>{{connectedUser.nom}}</b></span>
+      </div>
+      <div class="col-md-3">
+
+        <div class="dropdown">
+          <button class="btn btn-default dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-expanded="false">
+            <img src="assets/img/avatars/user.png" width="30" height="30" class="c-avatar" alt="admin@bootstrapmaster.com"/>
+          </button>
+          <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+            <button class="dropdown-item"[routerLink]="'profil'" ><i class="fa-solid fa-user"></i>&nbsp;Profil</button>
+            <button class="dropdown-item" ><i class="fa-solid fa-screwdriver-wrench"></i>&nbsp;Paramètres</button>
+            <button class="dropdown-item pe-auto" (click)="logout()"><i class="fa-solid fa-right-from-bracket"></i>&nbsp;Se Déconnecter</button>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,59 @@
+<div class="row mb-1 mr-0 custom-border d-flex align-items-center">
+  <div class="col-md-2 custom-border-right p-1 text-center mb-1 mt-1 ">
+    <img src="assets/product.png" width="100px" height="100px">
+  </div>
+
+  <!--  Details article-->
+  <div class="col-md-3 custom-border-right mb-1 mt-1 ">
+    <div class="col">
+      <div class="row">
+        <div class="col-md-1"><i class="fa-solid fa-file-signature"></i></div>
+        <div class="col-md-9">{{utilisateurDto?.nom}}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-1"><i class="fa-solid fa-signature"></i></div>
+        <div class="col-md-9">{{utilisateurDto?.prenom}}</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--  details categorie-->
+  <div class="col-md-3 custom-border-right mb-1 mt-1 ">
+    <div class="col">
+      <div class="row">
+        <div class="col-md-1"><i class="fa-solid fa-globe"></i></div>
+        <div class="col-md-10">{{utilisateurDto?.entreprise?.adresse?.pays}}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-1"><i class="fa-solid fa-address-book"></i></div>
+        <div class="col-md-10">{{utilisateurDto?.entreprise?.adresse?.adresse1}}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-1"><i class="fa-solid fa-address-card"></i></div>
+        <div class="col-md-10">{{utilisateurDto?.entreprise?.adresse?.adresse2}}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-1"><i class="fa-solid fa-at"></i></div>
+        <div class="col-md-10">{{utilisateurDto?.entreprise?.email}}</div>
+      </div>
+
+    </div>
+  </div>
+
+  <!--  boutons action-->
+  <div class="col-md-4 mb-1 mt-1 ">
+    <div class="row">
+      <div class="col-md-3">
+        <button type="button" class="btn btn-link" (click)="editUser()">
+          <i class="fas fa-pencil-alt"></i>&nbsp;Modifier
+        </button>
+      </div>
+      <div class="col-md-4">
+        <button type="button" class="btn btn-link" (click)="SupprimerUser()">
+          <i class="fas fa-trash-alt"></i>&nbsp;Supprimer
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,83 @@
+<div class="col mb-3">
+  <div class="col-md-12 mb-3">
+    <button (click)="fileInput.click()" style="background-color: transparent; border: none;">
+
+      <img src="{{this.utilisateursDto.photo}}" class="rounded-circle" width="200px" height="200px" />
+      <i class="fa-solid fa-user-pen"></i>
+      <input hidden type="file" #fileInput (change)="onFileInput(fileInput.files)">
+    </button>
+  </div>
+  <hr>
+  <div class="col-md-12">
+    <div class="col-md-12 mb-3">
+      <h2><i class="fas fa-info-circle blue-color"></i>&nbsp;Information de l'utilisateur</h2>
+    </div>
+    <div class="col-md-12">
+      <form>
+        <div class="row mb-3">
+          <div class="col">
+            <input type="text" [(ngModel)]="utilisateursDto.nom" name="nom" class="form-control" placeholder="Nom">
+          </div>
+          <div class="col">
+            <input type="text" [(ngModel)]="utilisateursDto.adresse!.adresse1" name="adresse1" class="form-control"
+                   placeholder="Adresse 1">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <input type="text" class="form-control" [(ngModel)]="utilisateursDto.prenom" name="prenom"
+                   placeholder="Prenom">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" [(ngModel)]="utilisateursDto.adresse!.adresse2" name="adresse2"
+                   placeholder="Adresse 2">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <input type="text" class="form-control" [(ngModel)]="utilisateursDto.email" name="email"
+                   placeholder="E-mail">
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" [(ngModel)]="utilisateursDto.adresse!.ville" name="ville"
+                   placeholder="Ville">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            <input type="password" name="password" [(ngModel)]="utilisateursDto.moteDePasse" class="form-control"
+                   placeholder="mot de passe">
+          </div>
+          <div class="col">
+            <input type="text" [(ngModel)]="utilisateursDto.adresse!.codePostale" name="code-postale"
+                   class="form-control" placeholder="Code postal">
+          </div>
+        </div>
+        <div class="row mb-3">
+          <div class="col">
+            &nbsp;
+          </div>
+          <div class="col">
+            <input type="text" class="form-control" name="pays" [(ngModel)]="utilisateursDto.adresse!.pays"
+                   placeholder="Pays">
+          </div>
+        </div>
+        <!--<div class="col">
+         &lt;!&ndash; [(ngModel)]="dateRecuperee"&ndash;&gt;
+          <input type="date" name="dateNaissance"/>
+        </div>-->
+      </form>
+    </div>
+  </div>
+  <div class="col-md-12 text-right">
+    <button class="btn btn-danger mr-3" (click)="cancel()">
+      <i class="fas fa-ban"></i>&nbsp;
+      Annuler
+    </button>
+    <button class="btn btn-primary" (click)="save()">
+      <i class="fas fa-save"></i>&nbsp;
+      Enregistrer
+    </button>
+  </div>
+
+</div>

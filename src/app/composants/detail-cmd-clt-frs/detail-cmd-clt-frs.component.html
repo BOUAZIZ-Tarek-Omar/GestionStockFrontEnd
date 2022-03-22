@@ -1,0 +1,65 @@
+<div class="row mb-1 mr-0 custom-border d-flex align-items-center">
+  <div class="col-md-2 custom-border-right p-1 text-center mb-1 mt-1 ">
+    <img src="{{ cltFrs?.photo }}" width="100px" height="100px">
+  </div>
+
+  <!--  Details Client/Fournisseur-->
+  <div class="col-md-4 custom-border-right mb-1 mt-1 ">
+    <div class="col">
+      <div class="row">
+        <div class="col-md-1"><i class="fa-solid fa-signature"></i></div>
+        <div class="col-md-9">{{ cltFrs?.nom }}</div>
+
+      </div>
+      <div class="row">
+        <div class="col-md-1"><i class="fa-solid fa-file-signature"></i></div>
+        <div class="col-md-9">{{ cltFrs?.prenom }}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-1"><i class="fa-solid fa-at"></i></div>
+        <div class="col-md-9">{{ cltFrs?.mail}}</div>
+      </div>
+      <div class="row">
+        <div class="col-md-1"><i class="fa-solid fa-phone"></i></div>
+        <div class="col-md-9">{{ cltFrs?.numTel }}</div>
+      </div>
+    </div>
+  </div>
+
+  <!--  details commande-->
+  <div class="col-md-3 custom-border-right mb-1 mt-1 ">
+    <div class="col">
+
+      <div class="row">
+        <div class="col-md-1"><i class="fas fa-qrcode blue-color"></i></div>
+        <h5 class="col-md-10">{{ commande.code }}</h5>
+      </div>
+      <div class="row">
+        <div class="col-md-1"><i class="fas fa-calendar-check blue-color"></i></div>
+        <h5 class="col-md-10">{{ commande.dateCommande|date}}</h5>
+      </div>
+      <div class="row ">
+        <div class="col-md-1"><i class="fas fa-cart-arrow-down blue-color"></i></div>
+        <h5 class="col-md-10">{{ commande.etatCommande}}</h5>
+      </div>
+    </div>
+  </div>
+
+  <!--  boutons action-->
+  <div class="col-md-3 mb-1 mt-1 ">
+    <div class="row">
+      <div class="col-md-6 text-center">
+        <button type="button" class="btn btn-link" (click)="modifierClick()">
+          <i class="fas fa-pencil-alt blue-color"></i>&nbsp;
+          Modifier
+        </button>
+      </div>
+      <div class="col-md-6 text-center">
+        <button type="button" class="btn btn-link">
+          <i class="fas fa-trash-alt blue-color"></i>&nbsp;
+          Supprimer
+        </button>
+      </div>
+    </div>
+  </div>
+</div>

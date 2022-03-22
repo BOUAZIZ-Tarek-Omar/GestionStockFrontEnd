@@ -1,0 +1,36 @@
+
+<div class="row mb-1 mr-0 custom-border" *ngFor="let mvt of mvtStocks">
+  <!--  Details article-->
+
+  <div class="col-md-3 custom-border-right mb-1 mt-1 ">
+    <div class="row text-center">
+      <div class="col-md-11">{{mvt.dateMvt|date}}</div>
+    </div>
+  </div>
+
+  <!--  details categorie-->
+  <div class="col-md-3 custom-border-right mb-1 mt-1 ">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h4>{{mvt.quantite}}</h4>
+      </div>
+    </div>
+  </div>
+
+  <div class="col-md-3 custom-border-right mb-1 mt-1 ">
+    <div class="row">
+      <div class="col-md-12 text-center">
+        <h4>{{mvt.typeMvt}}</h4>
+      </div>
+    </div>
+  </div>
+
+  <!--  boutons action-->
+  <div class="col-md-3 mb-1 mt-1">
+    <div class="row text-center">
+      <h4>{{mvt.sourceMvt}}</h4>
+
+    </div>
+  </div>
+</div>
+
